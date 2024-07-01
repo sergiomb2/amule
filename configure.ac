@@ -291,7 +291,6 @@ AS_IF([test x$SYS != xwin32], [
 ])
 AC_FUNC_MEMCMP
 AC_FUNC_SELECT_ARGTYPES
-AC_FUNC_SETVBUF_REVERSED
 AC_DEFINE_UNQUOTED([RETSIGTYPE],[$ac_cv_type_signal],[Define as the return type of signal handlers
 		    (`int' or `void').])
 
