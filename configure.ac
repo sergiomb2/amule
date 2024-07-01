@@ -29,7 +29,7 @@ AC_CONFIG_AUX_DIR([config])
 AM_INIT_AUTOMAKE([subdir-objects])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES])
 
-AC_PREREQ(2.62)
+AC_PREREQ([2.62])
 
 AC_CONFIG_SRCDIR([src/amule.cpp])
 AC_CONFIG_HEADERS([config.h])
@@ -281,7 +281,9 @@ AS_IF([test x$SYS != xwin32], [
 AC_FUNC_MEMCMP
 AC_FUNC_SELECT_ARGTYPES
 AC_FUNC_SETVBUF_REVERSED
-AC_TYPE_SIGNAL
+AC_DEFINE_UNQUOTED([RETSIGTYPE],[$ac_cv_type_signal],[Define as the return type of signal handlers
+		    (`int' or `void').])
+
 AC_FUNC_STAT
 AC_FUNC_STRFTIME
 AC_FUNC_STRTOD
